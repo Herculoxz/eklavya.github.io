@@ -34,7 +34,7 @@ Tom used Alan's data to generate a map of his path. Then he began determining th
 |  |        |  |        |  |       |  |
 |  |        |  |        |  |       |  |
 |  |________|  |________|  |_______|  |________|
-|___________    _______________________________| <--- **DEAD END**
+|___________    _______________________________| <--- **MINES AHEAD**
             |  |
             |  |
             |  |
@@ -105,9 +105,13 @@ Tom used Alan's data to generate a map of his path. Then he began determining th
 - Use the below example for reference : 
 ```
 START
-LEFT TURN       PLUS                    East
+MINES AHEAD 
+RIGHT TURN      RIGHT + STRAIGHT        West
 RIGHT TURN      ONLY RIGHT              South
 LEFT TURN       ONLY LEFT               East
+.
+.
+.
 END
 ...
 ```
@@ -115,7 +119,8 @@ END
 __Note__ :- 
 1. You should use only C language to solve this task.
 2.  Consider reference direction as North.
-3.  U turn is taken whenever a mine is encountered.
+3.  U turn is taken whenever a mine is encountered. Some turns are revealed after traversing back from the U turn.
+4.  The shortest path does not need to have a MINES message on it.
 
 ## Submission Instructions
 
